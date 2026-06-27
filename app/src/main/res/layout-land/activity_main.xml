@@ -18,9 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/forest"
+            android:elevation="4dp"
             android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
             app:menu="@menu/main_menu"
-            app:title="@string/app_name" />
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
         <FrameLayout
             android:id="@+id/content_frame"
@@ -40,36 +42,54 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2" />
 
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_margin="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/line_soft"
+                    app:strokeWidth="1dp">
 
-                    <TextView
-                        android:id="@+id/current_address"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/waiting_location"
-                        android:textColor="@color/ink"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/current_coordinates"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="8dp"
-                        android:text="@string/waiting_location" />
+                        <TextView
+                            android:id="@+id/current_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/waiting_location"
+                            android:textColor="@color/ink"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
 
-                    <Button
-                        android:id="@+id/button_save_here"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/save_here" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/current_coordinates"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/waiting_location"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_save_here"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="18dp"
+                            android:text="@string/save_here"
+                            app:cornerRadius="8dp"
+                            app:icon="@android:drawable/ic_menu_save"
+                            app:iconGravity="textStart" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
             <include layout="@layout/activity_main_form_content" />
@@ -81,5 +101,8 @@
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/white"
+        app:itemIconTint="@color/forest"
+        app:itemTextColor="@color/ink"
         app:menu="@menu/drawer_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>
