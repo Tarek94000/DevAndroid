@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/nav_map" />
+    <item
+        android:id="@+id/nav_new_place"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/nav_new_place" />
+    <item
+        android:id="@+id/nav_places"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="@string/nav_places" />
+    <item
+        android:id="@+id/nav_sync"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="@string/nav_sync" />
+</menu>

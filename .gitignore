@@ -1,0 +1,41 @@
+# Gradle / Android Studio
+.gradle/
+/build/
+**/build/
+*.iml
+local.properties
+
+# Android Studio local state
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing and local secrets
+*.jks
+*.keystore
+*.p12
+*.properties.local
+
+# Logs / diagnostics
+*.log
+*.hprof
+
+# Archives
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.PlaceTag" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mint_light</item>
+        <item name="colorPrimaryContainer">@color/forest</item>
+        <item name="colorSecondary">@color/clay</item>
+    </style>
+
+    <style name="Theme.PlaceTag" parent="Base.Theme.PlaceTag" />
+</resources>
